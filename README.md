@@ -139,7 +139,7 @@ python src/analyze.py ../results/results_fine.csv
 
 ---
 
-## Phụ thuộc Python
+## Python
 
 ```bash
 pip install pandas numpy scipy matplotlib
