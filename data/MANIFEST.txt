@@ -1,0 +1,33 @@
+Benchmark Dataset Manifest
+Generated for: Mergesort CUTOFF Experiment (N = 10,000, Quick Test)
+---------------------------------------------------------------------------
+Filename                  | N      | Type     | Seed | Size (bytes)
+---------------------------------------------------------------------------
+dups_10000_s42.bin        | 10,000 | dups     |   42 |        40004
+dups_10000_s42.txt        | 10,000 | dups     |   42 |        30007
+dups_10000_s43.bin        | 10,000 | dups     |   43 |        40004
+dups_10000_s43.txt        | 10,000 | dups     |   43 |        30007
+nearly_10000_s42.bin      | 10,000 | nearly   |   42 |        40004
+nearly_10000_s42.txt      | 10,000 | nearly   |   42 |        58897
+nearly_10000_s43.bin      | 10,000 | nearly   |   43 |        40004
+nearly_10000_s43.txt      | 10,000 | nearly   |   43 |        58897
+random_10000_s42.bin      | 10,000 | random   |   42 |        40004
+random_10000_s42.txt      | 10,000 | random   |   42 |       119985
+random_10000_s43.bin      | 10,000 | random   |   43 |        40004
+random_10000_s43.txt      | 10,000 | random   |   43 |       119920
+reversed_10000_s42.bin    | 10,000 | reversed |   42 |        40004
+reversed_10000_s42.txt    | 10,000 | reversed |   42 |        58901
+reversed_10000_s43.bin    | 10,000 | reversed |   43 |        40004
+reversed_10000_s43.txt    | 10,000 | reversed |   43 |        58901
+---------------------------------------------------------------------------
+Notes:
+  .bin format: 4-byte int header (N), followed by N x 4-byte int values (big-endian)
+  .txt format: first line = N, then N integers one per line (human-readable, N <= 10,000 only)
+
+Data types:
+  random   - Uniformly random integers (Random.nextInt())
+  nearly   - Nearly sorted: ascending array with ~1% random swaps
+  reversed - Fully descending: a[i] = N - i
+  dups     - Many duplicates: values in {0, 1, ..., 9} only
+
+Seeds are fixed for reproducibility. To regenerate: java GenData --quick

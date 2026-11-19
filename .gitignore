@@ -1,0 +1,33 @@
+# Java compiled files
+*.class
+
+# Python & virtual environment
+__pycache__/
+*.pyc
+.env
+venv/
+env/
+.venv/
+
+# LaTeX auxiliary files (giữ lại report.pdf & report.tex)
+*.aux
+*.toc
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+
+# IDE & Text Editor
+.vscode/
+.idea/
+*.iml
+
+# ==========================================
+# data/*.bin
+
+# Hệ điều hành
+.DS_Store
+Thumbs.db
+*.log
